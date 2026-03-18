@@ -164,11 +164,11 @@ docker run -p 8080:8080 --name spring-cloud-gateway-mvc-playground deepaksorthiy
 
 ### Postman API Collection
 
-TBD
+[All Rest API Endpoints](https://www.postman.com/deepaksorthiya/workspace/public-ws/collection/12463530-06a50a7f-3d47-4a15-8e8a-d2496829ebba?action=share&source=copy-link&creator=12463530)
 
 ### Rest API Endpoints
 
-TBD
+[All Rest API Endpoints](https://www.postman.com/deepaksorthiya/workspace/public-ws/collection/12463530-06a50a7f-3d47-4a15-8e8a-d2496829ebba?action=share&source=copy-link&creator=12463530)
 
 ### Run Unit-Integration Test Cases
 
