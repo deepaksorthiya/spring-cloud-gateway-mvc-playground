@@ -3,6 +3,7 @@ package com.example;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.servlet.function.RouterFunction;
 import org.springframework.web.servlet.function.ServerResponse;
 
@@ -10,6 +11,7 @@ import java.net.URI;
 
 import static org.springframework.cloud.gateway.server.mvc.filter.BeforeFilterFunctions.uri;
 import static org.springframework.cloud.gateway.server.mvc.filter.CircuitBreakerFilterFunctions.circuitBreaker;
+import static org.springframework.cloud.gateway.server.mvc.filter.FilterFunctions.redirectTo;
 import static org.springframework.cloud.gateway.server.mvc.filter.FilterFunctions.rewritePath;
 import static org.springframework.cloud.gateway.server.mvc.handler.GatewayRouterFunctions.route;
 import static org.springframework.cloud.gateway.server.mvc.handler.HandlerFunctions.http;
@@ -27,6 +29,11 @@ public class GatewayRoutesConfig {
                 .route(path("/get"), http())
                 .before(uri(HTTPS_HTTPBIN_ORG))
                 .build()
+
+                .and(route("local_redirect")
+                        .GET("/test", http())
+                        .filter(redirectTo(HttpStatus.FOUND, URI.create("http://localhost:8080/fallback")))
+                        .build())
 
                 .and(route("regex_path_route")
                         .route(path("/todos/**"), http())
