@@ -11,7 +11,7 @@
     <img src="https://img.shields.io/docker/pulls/deepaksorthiya/spring-cloud-gateway-mvc-playground?style=for-the-badge" alt="Docker"/>
   </a>
   <a href="https://spring.io/projects/spring-boot">
-    <img src="https://img.shields.io/badge/spring--boot-3.5.11-brightgreen?logo=springboot&style=for-the-badge" alt="Spring Boot"/>
+    <img src="https://img.shields.io/badge/spring--boot-3.5.16-brightgreen?logo=springboot&style=for-the-badge" alt="Spring Boot"/>
   </a>
 </p>
 
@@ -59,7 +59,7 @@ A modern **Spring Boot** starter project gateway mvc.
 - Git `2.51+`
 - Java `25`
 - Maven `3.9+`
-- Spring Boot `3.5.11`
+- Spring Boot `3.5.16`
 - (Optional)Docker Desktop (tested on `4.50+`)
 - (Optional) Minikube/Helm for Kubernetes
 
@@ -189,13 +189,13 @@ To run your existing tests in a native image, run the following goal:
 For further reference, please consider the following sections:
 
 * [Official Apache Maven documentation](https://maven.apache.org/guides/index.html)
-* [Spring Boot Maven Plugin Reference Guide](https://docs.spring.io/spring-boot/3.5.11/maven-plugin)
-* [Create an OCI image](https://docs.spring.io/spring-boot/3.5.11/maven-plugin/build-image.html)
-* [GraalVM Native Image Support](https://docs.spring.io/spring-boot/3.5.11/reference/packaging/native-image/introducing-graalvm-native-images.html)
-* [Spring Boot Actuator](https://docs.spring.io/spring-boot/3.5.11/reference/actuator/index.html)
-* [OAuth2 Client](https://docs.spring.io/spring-boot/3.5.11/reference/web/spring-security.html#web.security.oauth2.client)
-* [Spring Security](https://docs.spring.io/spring-boot/3.5.11/reference/web/spring-security.html)
-* [Spring Web](https://docs.spring.io/spring-boot/3.5.11/reference/web/servlet.html)
+* [Spring Boot Maven Plugin Reference Guide](https://docs.spring.io/spring-boot/3.5.16/maven-plugin)
+* [Create an OCI image](https://docs.spring.io/spring-boot/3.5.16/maven-plugin/build-image.html)
+* [GraalVM Native Image Support](https://docs.spring.io/spring-boot/3.5.16/reference/packaging/native-image/introducing-graalvm-native-images.html)
+* [Spring Boot Actuator](https://docs.spring.io/spring-boot/3.5.16/reference/actuator/index.html)
+* [OAuth2 Client](https://docs.spring.io/spring-boot/3.5.16/reference/web/spring-security.html#web.security.oauth2.client)
+* [Spring Security](https://docs.spring.io/spring-boot/3.5.16/reference/web/spring-security.html)
+* [Spring Web](https://docs.spring.io/spring-boot/3.5.16/reference/web/servlet.html)
 * [Gateway](https://docs.spring.io/spring-cloud-gateway/reference/spring-cloud-gateway-server-mvc.html)
 * [Resilience4J](https://docs.spring.io/spring-cloud-circuitbreaker/reference/spring-cloud-circuitbreaker-resilience4j.html)
 
