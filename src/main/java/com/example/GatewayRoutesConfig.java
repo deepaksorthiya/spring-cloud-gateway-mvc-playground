@@ -9,6 +9,7 @@ import org.springframework.web.servlet.function.ServerResponse;
 
 import java.net.URI;
 
+import static org.springframework.cloud.gateway.server.mvc.filter.BeforeFilterFunctions.setPath;
 import static org.springframework.cloud.gateway.server.mvc.filter.BeforeFilterFunctions.uri;
 import static org.springframework.cloud.gateway.server.mvc.filter.CircuitBreakerFilterFunctions.circuitBreaker;
 import static org.springframework.cloud.gateway.server.mvc.filter.FilterFunctions.redirectTo;
@@ -55,6 +56,13 @@ public class GatewayRoutesConfig {
                 .and(route("method_route")
                         .route(method(HttpMethod.POST), http())
                         .before(uri(HTTPS_HTTPBIN_ORG))
+                        .build())
+
+                .and(route("circuit_breaker_forced_open")
+                        .route(path("/circuitbreaker/forced-open"), http())
+                        .before(uri(HTTPS_HTTPBIN_ORG))
+                        .before(setPath("/get"))
+                        .filter(circuitBreaker("forced-open"))
                         .build())
 
                 .and(route("circuitbreaker_route")
