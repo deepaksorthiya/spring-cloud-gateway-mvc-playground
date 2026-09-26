@@ -88,6 +88,14 @@ class SpringCloudGatewayRoutesTests {
     }
 
     @Test
+    void circuitBreakerCallNotPermittedExceptionReturns500() {
+        ResponseEntity<Map> response = testRestTemplate.getForEntity("/circuitbreaker/forced-open",
+                Map.class);
+        assertThat(response.getStatusCode()).isEqualTo(HttpStatus.INTERNAL_SERVER_ERROR);
+        assertThat(response.getHeaders().getContentType()).isEqualTo(MediaType.APPLICATION_PROBLEM_JSON);
+    }
+
+    @Test
     public void circuitBreakerRouteWorks() {
         HttpHeaders headers = new HttpHeaders();
         headers.setAccept(List.of(MediaType.APPLICATION_JSON));
